@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     String result;
     EditText eNum;
     EditText eNum2;
+    RadioGroup opcion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,68 +24,71 @@ public class MainActivity extends AppCompatActivity {
         eNum2 = (EditText) findViewById(R.id.eNum2);
         final  TextView tResul = (TextView) findViewById(R.id.tResultado);
         Button bCalcular = (Button) findViewById(R.id.bCalcular);
+        opcion=(RadioGroup) findViewById(R.id.operacion);
 
 
         bCalcular.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+
+                if (eNum.getText().toString().matches("") || eNum2.getText().toString().matches("") ){
+
+                    result=getString(R.string.opcion);
+                }
+                else {
+                    num1= Integer.valueOf(eNum.getText().toString());
+                    num2= Integer.valueOf(eNum2.getText().toString());
+                    double aux;
+
+
+                    // Is the button now checked?
+                    //boolean checked = ((RadioButton) view).isChecked();
+
+                    // Check which radio button was clicked
+                    switch(opcion.getCheckedRadioButtonId()) {
+                        case R.id.bSuma:
+
+                                result = String.valueOf(num1+num2);
+
+                            break;
+
+                        case R.id.bResta:
+
+                                result = String.valueOf(num1-num2);
+
+                            break;
+
+                        case R.id.bMulti:
+
+                                result = String.valueOf(num1*num2);
+
+                            break;
+
+                        case R.id.bDiv:
+
+                                if (num2==0){
+                                    result = getString(R.string.Error);
+                                }
+                                else {
+
+                                    //result = String.valueOf( aux );
+                                    result= String.format("%1$.2f",( (double)num1 / (double) num2 ));
+                                }
+
+                            break;
+                        default: result= getString(R.string.opcion);
+
+                    }
+
+                }
+
                 tResul.setText(result);
             }
         });
     }
 
 
-    public void click (View view){
-        if (eNum.getText().toString().matches("") || eNum2.getText().toString().matches("") ){
-
-            result=getString(R.string.opcion);
-        }
-        else {
-            num1= Integer.valueOf(eNum.getText().toString());
-            num2= Integer.valueOf(eNum2.getText().toString());
-            double aux;
-
-
-            // Is the button now checked?
-            boolean checked = ((RadioButton) view).isChecked();
-
-            // Check which radio button was clicked
-            switch(view.getId()) {
-                case R.id.bSuma:
-                    if (checked) {
-                        result = String.valueOf(num1+num2);
-                    }
-                    break;
-
-                case R.id.bResta:
-                    if (checked) {
-                        result = String.valueOf(num1-num2);
-                    }
-                    break;
-
-                case R.id.bMulti:
-                    if (checked) {
-                        result = String.valueOf(num1*num2);
-                    }
-                    break;
-
-                case R.id.bDiv:
-                    if (checked) {
-                        if (num2==0){
-                            result = getString(R.string.Error);
-                        }
-                        else {
-
-                            //result = String.valueOf( aux );
-                            result= String.format("%1$.2f",( (double)num1 / (double) num2 ));
-                        }
-                    }
-                    break;
-                default: result= getString(R.string.opcion);
-
-            }
-
-        }
+    public void click (View view){ //esta funcion deja clickear los RadioButtons
 
     }
 }
