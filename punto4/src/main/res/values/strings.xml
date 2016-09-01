@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Punto4</string>
+    <string name="Usuario">Usuario:</string>
+    <string name="hintUsuario"></string>
+    <string name="Password">Contraseña:</string>
+    <string name="hintPassword"></string>
+    <string name="tRepetirContrasena">Repetir Contraseña</string>
+    <string name="tNacimiento">Lugar de nacimiento</string>
+    <string name="tCorreo">Correo</string>
+
+
+    <string name="Ciudades_prompt">Elija una Ciudad</string>
+    <string-array name="Ciudades">
+        <item>Barranquilla</item>
+        <item>Bogota</item>
+        <item>Cali</item>
+        <item>Manizales</item>
+        <item>Medellin</item>
+        <item>Monteria</item>
+    </string-array>
+
+</resources>
