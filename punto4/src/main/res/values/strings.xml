@@ -1,12 +1,37 @@
 <resources>
     <string name="app_name">Punto4</string>
-    <string name="Usuario">Usuario:</string>
+    <string name="Usuario">Usuario</string>
     <string name="hintUsuario"></string>
-    <string name="Password">Contraseña:</string>
+    <string name="Password">Contraseña</string>
     <string name="hintPassword"></string>
-    <string name="tRepetirContrasena">Repetir Contraseña</string>
-    <string name="tNacimiento">Lugar de nacimiento</string>
+    <string name="tRepetirContrasena">Repetir\nContraseña</string>
+    <string name="tNacimiento">Lugar de\nNacimiento </string>
     <string name="tCorreo">Correo</string>
+    <string name="tFecha">Fecha de\nNacimiento </string>
+    <string name="tSexo">Sexo</string>
+    <string name="SexoM">Masculino</string>
+    <string name="SexoF">Femenino</string>
+    <string name="checkMasculino">M</string>
+    <string name="checkFemenino">F</string>
+    <string name="tHobbies">Hobbies</string>
+    <string name="checkFutbol">Futbol</string>
+    <string name="checkNadar">Nadar</string>
+    <string name="checkCorrer">Correr</string>
+    <string name="checkBici">Bicicleta</string>
+    <string name="bAceptar">Aceptar</string>
+    <string name="Ingrese">Ingrese: </string>
+    <string name="Enter">\n</string>
+    <string name="ErroContrasena">Las contraseñas no coinciden</string>
+
+
+
+
+
+
+
+    checkFutbol
+
+
 
 
     <string name="Ciudades_prompt">Elija una Ciudad</string>

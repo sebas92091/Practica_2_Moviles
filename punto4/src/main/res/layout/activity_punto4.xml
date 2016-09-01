@@ -15,124 +15,234 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:orientation="vertical">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="0,1">
 
-          <RelativeLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="horizontal">
+            <TableRow>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Usuario"
+                    android:textSize="20sp"
+                    android:id="@+id/textView2"
+                     />
 
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eUsuario"
+                    android:hint="@string/hintUsuario"
+                    android:inputType="textEmailAddress"
+                    android:ems="4"/>
 
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="@string/Usuario"
-                  android:textSize="20sp"
-                  android:layout_marginTop="36dp"
-                  android:id="@+id/textView2"
-                  android:layout_alignParentTop="true"
-                  android:layout_alignParentStart="true" />
+            </TableRow>
 
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="@string/Password"
-                  android:textSize="20sp"
-                  android:layout_marginTop="25dp"
-                  android:id="@+id/textView"
-                  android:layout_below="@+id/textView2"
-                  android:layout_alignParentStart="true" />
+            <TableRow>
 
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:id="@+id/tRepetirContrasena"
-                  android:layout_marginTop="30dp"
-                  android:textSize="20sp"
-                  android:text="@string/tRepetirContrasena"
-                  android:layout_below="@+id/textView"
-                  android:layout_alignParentStart="true"
-                  android:layout_alignEnd="@+id/textView" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Password"
+                    android:textSize="20sp"
+                    android:id="@+id/textView"
+                     />
 
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="@string/tCorreo"
-                  android:id="@+id/tCorreo"
-                  android:layout_marginTop="25dp"
-                  android:textSize="20sp"
-                  android:layout_below="@+id/eRepetirContrasena"
-                  android:layout_alignParentStart="true" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ePassword"
+                    android:hint="@string/hintPassword"
+                    android:inputType="textPassword"
+                    android:ems="4"/>
 
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="@string/tNacimiento"
-                  android:id="@+id/tNacimiento"
-                  android:textSize="20sp"
-                  android:layout_centerVertical="true"
-                  android:layout_toStartOf="@+id/eRepetirContrasena" />
+            </TableRow>
 
-              <EditText
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:inputType="textEmailAddress"
-                  android:ems="9"
-                  android:id="@+id/eCorreo"
-                  android:layout_alignBottom="@+id/tCorreo"
-                  android:layout_alignStart="@+id/eRepetirContrasena" />
+            <TableRow>
 
-              <EditText
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:id="@+id/eUsuario"
-                  android:hint="@string/hintUsuario"
-                  android:inputType="textEmailAddress"
-                  android:layout_above="@+id/textView"
-                  android:layout_alignStart="@+id/ePassword"
-                  android:ems="9"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/tRepetirContrasena"
+                    android:textSize="20sp"
+                    android:layout_gravity="top"
+                    android:gravity="top"
+                    android:text="@string/tRepetirContrasena"/>
 
-              <EditText
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:id="@+id/ePassword"
-                  android:hint="@string/hintPassword"
-                  android:inputType="textPassword"
-                  android:layout_alignBottom="@+id/textView"
-                  android:layout_alignStart="@+id/eRepetirContrasena"
-                  android:ems="9"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="4"
+                    android:id="@+id/eRepetirContrasena"/>
 
-              <EditText
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:inputType="textPassword"
-                  android:ems="9"
-                  android:id="@+id/eRepetirContrasena"
-                  android:layout_alignBottom="@+id/tRepetirContrasena"
-                  android:layout_toEndOf="@+id/tRepetirContrasena"
-                  android:layout_marginStart="29dp" />
+            </TableRow>
 
+            <TableRow>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tCorreo"
+                    android:id="@+id/tCorreo"
+                    android:textSize="20sp" />
 
-              <Spinner
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:id="@+id/spinner"
-                  android:layout_alignStart="@+id/eCorreo"
-                  android:layout_alignBottom="@+id/tNacimiento"
-                  android:spinnerMode="dropdown"
-                  android:entries="@array/Ciudades"
-                  android:prompt="@string/Ciudades_prompt"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="4"
+                    android:id="@+id/eCorreo"/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tNacimiento"
+                    android:id="@+id/tNacimiento"
+                    android:textSize="20sp"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner"
+                    android:spinnerMode="dropdown"
+                    android:prompt="@string/Ciudades_prompt"
+                    android:entries="@array/Ciudades"/>
+
+            </TableRow>
+            <TableRow>
 
 
-          </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tFecha"
+                    android:id="@+id/tFecha"
+                    android:textSize="20sp"/>
+            </TableRow>
 
-      </LinearLayout>
+
+                <DatePicker
+                    android:id="@+id/dFecha"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner">
+                </DatePicker>
+
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tSexo"
+                    android:id="@+id/tSexo"
+                    android:textSize="20sp"/>
+
+                <LinearLayout>
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkMasculino"
+                        android:text="@string/checkMasculino"
+                        android:textSize="20sp"
+                        android:onClick="Check_click"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkFemenino"
+                        android:text="@string/checkFemenino"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="15sp"
+                        android:onClick="Check_click"/>
+                </LinearLayout>
+            </TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tHobbies"
+                android:id="@+id/tHobbies"
+                android:textSize="20sp"/>
+            <LinearLayout
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkFutbol"
+                        android:text="@string/checkFutbol"
+                        android:textSize="20sp"
+                        android:onClick="Check_click"/>
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkNadar"
+                        android:text="@string/checkNadar"
+                        android:textSize="20sp"
+                        android:onClick="Check_click"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20sp">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkCorrer"
+                        android:text="@string/checkCorrer"
+                        android:textSize="20sp"
+                        android:onClick="Check_click"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBici"
+                        android:text="@string/checkBici"
+                        android:textSize="20sp"
+                        android:onClick="Check_click"/>
+                </LinearLayout>
+
+            </LinearLayout>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bAceptar"
+                    android:text="@string/bAceptar"
+                    android:textSize="15sp"
+                    android:onClick="click"/>
+
+                <TextView
+                    android:id="@+id/tMostrarDatos"
+                    android:textSize="20sp"/>
+
+        </TableLayout>
 
     </ScrollView>
 
 </LinearLayout>
+
+
+
+
+
+
+
+
+
